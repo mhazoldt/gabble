@@ -1,0 +1,27 @@
+{
+  "name": "express-scaffold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e .js,.mustache,.css,.json app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "config": "^1.26.1",
+    "express": "^4.15.3",
+    "express-flash-messages": "^0.1.1",
+    "express-mysql-session": "^1.2.2",
+    "express-session": "^1.15.4",
+    "express-validator": "^3.2.1",
+    "mustache-express": "^1.2.5",
+    "mysql": "^2.14.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}

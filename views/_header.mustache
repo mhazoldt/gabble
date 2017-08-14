@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Gabble</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light navbar-inverse bg-primary mb-2" id="mainNav">
+            <a class="navbar-brand" href="/">Gabble</a>
+            {{#isAuthenticated}}<span style="color: white;"><i class="fa fa-user mr-1" aria-hidden="true"></i>{{user.username}}</span>{{/isAuthenticated}}
+            <div class="navbar-nav ml-auto">
+                
+                {{#isAuthenticated}}
+                    <a class="nav-item nav-link" href="/gab/new"><i class="fa fa-plus" aria-hidden="true"></i> New Gab</a>
+                    <a class="nav-item nav-link" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                {{/isAuthenticated}}
+                {{^isAuthenticated}}
+                    <a class="nav-item nav-link" href="/register"><i class="fa fa-plus-square" aria-hidden="true"></i> Register</a>
+                    <a class="nav-item nav-link" href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                {{/isAuthenticated}}
+            </div>
+        </nav>
+        
+        <div class="container mt-4">

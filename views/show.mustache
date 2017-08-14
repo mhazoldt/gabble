@@ -1,0 +1,32 @@
+{{> _header}}
+<h1>Gab</h1>
+
+{{#gab}}
+
+    <div class="card bg-light mb-3 border-primary" style="max-width: 20rem;">
+        <div class="card-header border-primary"><i class="fa fa-user mr-1" aria-hidden="true"></i>{{username}}</div>
+        <div class="card-body">
+            <p class="card-text">{{content}}</p>
+            
+        </div>
+        <div class="card-footer border-primary d-flex justify-content-between">
+            <a class="text-dark" href="/gab/like/{{id}}"><i class="fa fa-thumbs-up" aria-hidden="true"></i>{{#like_id}} {{like_count}}{{/like_id}}</a>
+            {{#button}}
+            <a class="text-danger" href="/gab/delete/{{id}}">Delete</a>
+            {{/button}}
+            <a class="text-dark" href="/gab/show/{{id}}">View</a>
+            
+        </div>
+    </div>
+    {{#like_id}}<h4>Liked By:</h4>{{/like_id}}
+{{/gab}}
+
+{{#likes}}
+    <i class="fa fa-user mr-1" aria-hidden="true"></i>{{username}}<br>
+{{/likes}}
+<br>
+<br>
+<button class="btn btn-primary" onclick="window.history.back();">Back</button>
+{{> _footer}}
+
+
